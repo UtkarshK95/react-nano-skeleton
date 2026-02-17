@@ -1,6 +1,6 @@
 {
   "name": "react-nano-skeleton",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Ultra-minimal, zero-dependency skeleton loader for React.",
   "license": "MIT",
   "main": "dist/index.mjs",
