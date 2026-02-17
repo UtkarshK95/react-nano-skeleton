@@ -64,6 +64,14 @@ export default function App() {
 
 ---
 
+## 🌐 Live Demo
+
+https://react-nano-skeleton-demo.vercel.app/
+
+Explore all presets and real UI loading states in a minimal demo app.
+
+---
+
 # 🧩 Components API
 
 ## 1. Skeleton (primitive)
