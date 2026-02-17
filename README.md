@@ -2,7 +2,7 @@
 
 Ultra-minimal, zero-dependency skeleton loader for React.
 
-**< 5 KB gzipped · ESM-first · Preset-driven · No styling framework required**
+**< 7 KB gzipped · ESM-first · Preset-driven · No styling framework required**
 
 ---
 
@@ -25,7 +25,7 @@ without importing an entire UI framework.
 
 # ✨ Features
 
-- **Extremely small bundle** (< 5 KB gzipped)
+- **Extremely small bundle** (< 7 KB gzipped)
 - **Zero runtime dependencies**
 - **Modern ESM-only distribution**
 - Works with **Vite, Next.js, Webpack, CRA**
@@ -72,13 +72,13 @@ Low-level building block for custom layouts.
 
 ### Props
 
-| Prop    | Type            | Default  | Description    |
-| ------- | --------------- | -------- | -------------- |
-| width   | number | string | `"100%"` | Block width    |
-| height  | number | string | `16`     | Block height   |
-| radius  | number | string | `8`      | Border radius  |
-| count   | number          | `1`      | Repeat blocks  |
-| animate | boolean         | `true`   | Enable shimmer |
+| Prop    | Type    | Default | Description    |
+| ------- | ------- | ------- | -------------- | ------------- |
+| width   | number  | string  | `"100%"`       | Block width   |
+| height  | number  | string  | `16`           | Block height  |
+| radius  | number  | string  | `8`            | Border radius |
+| count   | number  | `1`     | Repeat blocks  |
+| animate | boolean | `true`  | Enable shimmer |
 
 ---
 
@@ -253,7 +253,7 @@ Form-like stacked inputs.
 Enforced via **size-limit**:
 
 ```
-< 5 KB gzipped
+< 7 KB gzipped
 ```
 
 Loading states become **essentially free** in production.
