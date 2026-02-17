@@ -1,0 +1,153 @@
+/* ============================================
+   REACT NANO SKELETON - WORLD-CLASS UI STYLES
+   ============================================ */
+
+/* Base skeleton styles - Light theme optimized */
+.nano-skeleton {
+  position: relative;
+  overflow: hidden;
+
+  /* Light theme: subtle gray that matches major apps */
+  background: linear-gradient(90deg, #f0f0f0 0%, #e8e8e8 50%, #f0f0f0 100%);
+  background-size: 200% 100%;
+
+  /* Modern, subtle rounding */
+  border-radius: 6px;
+
+  /* Prevent text selection */
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Dark theme support */
+@media (prefers-color-scheme: dark) {
+  .nano-skeleton {
+    background: linear-gradient(90deg, #1a1a1a 0%, #242424 50%, #1a1a1a 100%);
+  }
+}
+
+/* ============================================
+   ANIMATION VARIANTS
+   ============================================ */
+
+/* Default: Shimmer animation (like Flipkart, Amazon) */
+.nano-skeleton-shimmer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+
+  /* Subtle, fast-moving shimmer */
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.3) 40%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0.3) 60%,
+    transparent 100%
+  );
+
+  /* Fast, smooth animation - 1.6s is optimal */
+  animation: nano-shimmer 1.6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@media (prefers-color-scheme: dark) {
+  .nano-skeleton-shimmer::after {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.05) 40%,
+      rgba(255, 255, 255, 0.1) 50%,
+      rgba(255, 255, 255, 0.05) 60%,
+      transparent 100%
+    );
+  }
+}
+
+@keyframes nano-shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Pulse animation variant (like LinkedIn, Facebook) */
+.nano-skeleton-pulse {
+  animation: nano-pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes nano-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Wave animation variant (more dramatic) */
+.nano-skeleton-wave {
+  background-size: 200% 100%;
+  animation: nano-wave 1.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes nano-wave {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .nano-skeleton-shimmer::after,
+  .nano-skeleton-pulse,
+  .nano-skeleton-wave {
+    animation: none;
+  }
+
+  .nano-skeleton-pulse {
+    opacity: 0.7;
+  }
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+/* For circular avatars */
+.nano-skeleton-circle {
+  border-radius: 50%;
+}
+
+/* For rounded rectangles */
+.nano-skeleton-rounded-sm {
+  border-radius: 4px;
+}
+
+.nano-skeleton-rounded {
+  border-radius: 6px;
+}
+
+.nano-skeleton-rounded-md {
+  border-radius: 8px;
+}
+
+.nano-skeleton-rounded-lg {
+  border-radius: 12px;
+}
+
+.nano-skeleton-rounded-xl {
+  border-radius: 16px;
+}
+
+/* For sharp corners */
+.nano-skeleton-sharp {
+  border-radius: 0;
+}
