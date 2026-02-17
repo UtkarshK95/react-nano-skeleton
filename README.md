@@ -2,7 +2,7 @@
 
 Ultra-minimal, zero-dependency skeleton loader for React.
 
-**< 7 KB gzipped · ESM-first · Preset-driven · No styling framework required**
+**Lightweight · ESM-first · Preset-driven · No styling framework required**
 
 ---
 
@@ -25,7 +25,7 @@ without importing an entire UI framework.
 
 # ✨ Features
 
-- **Extremely small bundle** (< 7 KB gzipped)
+- **Extremely small bundle**
 - **Zero runtime dependencies**
 - **Modern ESM-only distribution**
 - Works with **Vite, Next.js, Webpack, CRA**
@@ -249,12 +249,6 @@ Form-like stacked inputs.
 ---
 
 # 📏 Bundle size
-
-Enforced via **size-limit**:
-
-```
-< 7 KB gzipped
-```
 
 Loading states become **essentially free** in production.
 
