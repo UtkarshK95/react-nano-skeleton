@@ -292,6 +292,17 @@ Ways to contribute:
 
 ---
 
+## ☕ Support the Project
+
+If **react-nano-skeleton** saved you time, consider supporting the work:
+
+- GitHub: [https://github.com/UtkarshK95/react-nano-skeleton](https://github.com/UtkarshK95/react-nano-skeleton)
+- Buy Me a Coffee: [https://buymeacoffee.com/utkarshk95](https://buymeacoffee.com/utkarshk95)
+
+Your support helps maintain and improve the library.
+
+---
+
 # 📄 License
 
 MIT © Utkarsh
