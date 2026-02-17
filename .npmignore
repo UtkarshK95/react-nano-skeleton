@@ -1,0 +1,14 @@
+# source and configs not needed in npm package
+src/
+tsconfig.json
+tsup.config.ts
+vitest.config.ts
+
+# development artifacts
+node_modules/
+coverage/
+*.log
+.git
+.github
+.vscode
+.idea
