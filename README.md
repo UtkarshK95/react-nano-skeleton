@@ -72,13 +72,13 @@ Low-level building block for custom layouts.
 
 ### Props
 
-| Prop    | Type    | Default | Description    |
-| ------- | ------- | ------- | -------------- | ------------- |
-| width   | number  | string  | `"100%"`       | Block width   |
-| height  | number  | string  | `16`           | Block height  |
-| radius  | number  | string  | `8`            | Border radius |
-| count   | number  | `1`     | Repeat blocks  |
-| animate | boolean | `true`  | Enable shimmer |
+| Prop    | Type            | Default  | Description    |
+| ------- | --------------- | -------- | -------------- |
+| width   | number | string | `"100%"` | Block width    |
+| height  | number | string | `16`     | Block height   |
+| radius  | number | string | `8`      | Border radius  |
+| count   | number          | `1`      | Repeat blocks  |
+| animate | boolean         | `true`   | Enable shimmer |
 
 ---
 
