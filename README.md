@@ -1,43 +1,38 @@
-# react-nano-skeleton
+<div align="center">
 
-Ultra-minimal, zero-dependency skeleton loader for React.
+# 🦴 react-nano-skeleton
 
-**Lightweight · ESM-first · Preset-driven · No styling framework required**
+**Ultra-minimal, zero-dependency skeleton loader for React.**
 
----
+Lightweight · ESM-first · Preset-driven · No styling framework required
 
-# ✨ Why this library exists
+[![npm](https://img.shields.io/badge/npm-react--nano--skeleton-CB3837?style=for-the-badge&logo=npm)](https://www.npmjs.com/package/react-nano-skeleton)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](./LICENSE)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-vercel-blue?style=for-the-badge&logo=vercel)](https://react-nano-skeleton-demo.vercel.app)
 
-Most skeleton libraries are:
-
-- Large and dependency-heavy
-- Coupled to Tailwind, MUI, or full design systems
-- Over-configurable for simple loading states
-
-**react-nano-skeleton** focuses on:
-
-> Tiny size + practical presets + zero setup.
-
-You get the **real loading UI patterns used in modern apps**
-without importing an entire UI framework.
+</div>
 
 ---
 
-# ✨ Features
+## ✨ Why react-nano-skeleton?
 
-- **Extremely small bundle**
+Most skeleton libraries are large and dependency-heavy, tightly coupled to Tailwind, MUI, or full design systems, and over-configurable for what is ultimately a simple loading state.
+
+**react-nano-skeleton** focuses on tiny size + practical presets + zero setup. You get the real loading UI patterns used in modern apps without importing an entire UI framework.
+
 - **Zero runtime dependencies**
-- **Modern ESM-only distribution**
-- Works with **Vite, Next.js, Webpack, CRA**
-- **14 ready-to-use UI skeleton presets**
-- **Tree-shakable**
+- **Extremely small bundle** — loading states are essentially free in production
+- **14 ready-to-use UI presets** for the most common patterns
+- **ESM-only, tree-shakable** distribution
 - **TypeScript types included**
 - **Dark-theme-ready shimmer**
-- No Tailwind / CSS-in-JS required
+- Works with **Vite, Next.js, Webpack, CRA**
+- No Tailwind or CSS-in-JS required
 
 ---
 
-# 📦 Installation
+## 📦 Installation
 
 ```bash
 npm install react-nano-skeleton
@@ -45,9 +40,9 @@ npm install react-nano-skeleton
 
 ---
 
-# 🚀 Quick start
+## 🚀 Quick Start
 
-```tsx
+```jsx
 import { Skeleton } from "react-nano-skeleton";
 
 export default function App() {
@@ -64,220 +59,66 @@ export default function App() {
 
 ---
 
-## 🌐 Live Demo
+## 🧩 Components API
 
-https://react-nano-skeleton-demo.vercel.app/
-
-Explore all presets and real UI loading states in a minimal demo app.
-
----
-
-# 🧩 Components API
-
-## 1. Skeleton (primitive)
+### `Skeleton` — Primitive
 
 Low-level building block for custom layouts.
 
-### Props
-
-| Prop    | Type            | Default  | Description    |
-| ------- | --------------- | -------- | -------------- |
-| width   | `number\|string` | `"100%"` | Block width    |
-| height  | `number\|string` | `16`     | Block height   |
-| radius  | `number\|string` | `8`      | Border radius  |
-| count   | `number`        | `1`      | Repeat blocks  |
-| animate | `boolean`       | `true`   | Enable shimmer |
+| Prop      | Type              | Default   | Description              |
+|-----------|-------------------|-----------|--------------------------|
+| `width`   | `number\|string`  | `"100%"`  | Block width              |
+| `height`  | `number\|string`  | `16`      | Block height             |
+| `radius`  | `number\|string`  | `8`       | Border radius            |
+| `count`   | `number`          | `1`       | Repeat blocks            |
+| `animate` | `boolean`         | `true`    | Enable shimmer animation |
 
 ---
 
-## 2. Skeleton.Text
+### Presets
 
-Paragraph-style stacked lines.
+| Component              | Best For                                  | Usage                              |
+|------------------------|-------------------------------------------|------------------------------------|
+| `Skeleton.Text`        | Descriptions, articles, forms             | `<Skeleton.Text lines={3} />`      |
+| `Skeleton.AvatarText`  | Comments, chats, user lists               | `<Skeleton.AvatarText lines={2} />`|
+| `Skeleton.Card`        | Blog grids, products, dashboards          | `<Skeleton.Card lines={3} />`      |
+| `Skeleton.Table`       | Admin panels, analytics, data grids       | `<Skeleton.Table rows={5} cols={4} />`|
+| `Skeleton.Banner`      | Landing headers, promotions               | `<Skeleton.Banner />`              |
+| `Skeleton.List`        | Menus, feeds, notifications               | `<Skeleton.List items={5} />`      |
+| `Skeleton.ProductRow`  | E-commerce product rows (image+title+price)| `<Skeleton.ProductRow />`         |
+| `Skeleton.Chip`        | Tags, filters, categories                 | `<Skeleton.Chip />`                |
+| `Skeleton.Comment`     | Comment sections, discussions             | `<Skeleton.Comment />`             |
+| `Skeleton.Button`      | Button-shaped loading blocks              | `<Skeleton.Button width={120} />`  |
+| `Skeleton.Image`       | Image / thumbnail placeholders            | `<Skeleton.Image height={200} />`  |
+| `Skeleton.Stat`        | Analytics cards, KPIs                     | `<Skeleton.Stat />`                |
+| `Skeleton.Form`        | Auth pages, settings, checkout            | `<Skeleton.Form fields={4} />`     |
 
-**Best for:** descriptions, articles, forms.
+---
 
-```tsx
-<Skeleton.Text lines={3} />
+## 🎨 Design Philosophy
+
+- Neutral **dark-ready base color** that works across light and dark themes
+- **Soft shimmer animation** with consistent timing
+- **8–16px spacing rhythm** matching modern UI systems
+- Rounded corners compatible with common design patterns
+- **Framework-agnostic styling** — no class name conflicts
+
+---
+
+## 📁 Project Structure
+
+```
+react-nano-skeleton/
+├── src/                  # Component source and types
+├── tsup.config.ts        # Build config (ESM output)
+├── vitest.config.ts      # Test configuration
+├── tsconfig.json         # TypeScript config
+└── package.json
 ```
 
 ---
 
-## 3. Skeleton.AvatarText
-
-Avatar + text rows.
-
-**Best for:** comments, chats, user lists.
-
-```tsx
-<Skeleton.AvatarText lines={2} />
-```
-
----
-
-## 4. Skeleton.Card
-
-Image + title + description layout.
-
-**Best for:** blog grids, products, dashboards.
-
-```tsx
-<Skeleton.Card lines={3} />
-```
-
----
-
-## 5. Skeleton.Table
-
-Table-like placeholder.
-
-**Best for:** admin panels, analytics, data grids.
-
-```tsx
-<Skeleton.Table rows={5} cols={4} />
-```
-
----
-
-## 6. Skeleton.Banner
-
-Wide banner / hero loading block.
-
-**Best for:** landing headers, promotions.
-
-```tsx
-<Skeleton.Banner />
-```
-
----
-
-## 7. Skeleton.List
-
-Vertical repeated row layout.
-
-**Best for:** menus, feeds, notifications.
-
-```tsx
-<Skeleton.List items={5} />
-```
-
----
-
-## 8. Skeleton.ProductRow
-
-E-commerce style product row.
-
-Includes:
-
-- image
-- title
-- price area
-
-```tsx
-<Skeleton.ProductRow />
-```
-
----
-
-## 9. Skeleton.Chip
-
-Small rounded label placeholder.
-
-**Best for:** tags, filters, categories.
-
-```tsx
-<Skeleton.Chip />
-```
-
----
-
-## 10. Skeleton.Comment
-
-Avatar + multi-line message layout.
-
-**Best for:** comment sections, discussions.
-
-```tsx
-<Skeleton.Comment />
-```
-
----
-
-## 11. Skeleton.Button
-
-Button-shaped loading block.
-
-```tsx
-<Skeleton.Button width={120} />
-```
-
----
-
-## 12. Skeleton.Image
-
-Image / thumbnail placeholder.
-
-```tsx
-<Skeleton.Image height={200} />
-```
-
----
-
-## 13. Skeleton.Stat
-
-Dashboard metric block.
-
-**Best for:** analytics cards, KPIs.
-
-```tsx
-<Skeleton.Stat />
-```
-
----
-
-## 14. Skeleton.Form
-
-Form-like stacked inputs.
-
-**Best for:** auth pages, settings, checkout.
-
-```tsx
-<Skeleton.Form fields={4} />
-```
-
----
-
-# 🎨 Design philosophy
-
-- Neutral **dark-ready base color**
-- **Soft shimmer animation**
-- Consistent **8–16px spacing rhythm**
-- Rounded corners matching modern UI systems
-- **Framework-agnostic styling**
-
----
-
-# 📏 Bundle size
-
-Loading states become **essentially free** in production.
-
----
-
-# 🧪 Testing
-
-Minimal smoke tests using:
-
-- **Vitest**
-- **React Testing Library**
-
-Ensures:
-
-- Components import correctly
-- Rendering does not crash
-- Presets mount successfully
-
----
-
-# 🛠 Development
+## 🛠️ Development
 
 ```bash
 npm install
@@ -285,34 +126,29 @@ npm run build
 npm test
 ```
 
+Testing uses **Vitest** + **React Testing Library** to ensure components import correctly, render without crashing, and all presets mount successfully.
+
 ---
 
-# 🤝 Contributing
+## 🤝 Contributing
 
-PRs and issues are welcome.
-
-Ways to contribute:
-
-- new presets
-- accessibility improvements
-- animation polish
-- performance tweaks
+PRs and issues are welcome! Ways to contribute: new presets, accessibility improvements, animation polish, or performance tweaks. Please open an issue first to discuss significant changes.
 
 ---
 
 ## ☕ Support the Project
 
-If **react-nano-skeleton** saved you time, consider supporting the work:
-
-- GitHub: [https://github.com/UtkarshK95/react-nano-skeleton](https://github.com/UtkarshK95/react-nano-skeleton)
-- Buy Me a Coffee: [https://buymeacoffee.com/utkarshk95](https://buymeacoffee.com/utkarshk95)
-
-Your support helps maintain and improve the library.
+- **GitHub:** [https://github.com/UtkarshK95/react-nano-skeleton](https://github.com/UtkarshK95/react-nano-skeleton)
+- **Buy Me a Coffee:** [https://buymeacoffee.com/utkarshk95](https://buymeacoffee.com/utkarshk95)
 
 ---
 
-# 📄 License
+## 📄 License
 
-MIT © Utkarsh
+This project is licensed under the [MIT License](./LICENSE).
 
-Free for personal and commercial use.
+---
+
+<div align="center">
+  Made with ❤️ by <a href="https://github.com/UtkarshK95">Utkarsh Katiyar</a>
+</div>
